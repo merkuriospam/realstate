@@ -108,7 +108,6 @@ Flight::route('POST /editar/@id', function($id){
     $row = $result->fetchArray();
     $imagenes = json_decode($row['imagenes'] ?: '[]');
     
-    // $propiedad_id = $imagenes[0] ? explode('_', $imagenes[0])[0] : uniqid();
     $propiedad_id = (!empty($imagenes) && isset($imagenes[0])) ? explode('_', $imagenes[0])[0] : uniqid();
     
     // Eliminar imágenes marcadas
