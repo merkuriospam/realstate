@@ -1,6 +1,12 @@
 <h1>Nueva Propiedad</h1>
 
 <form method="POST" action="/nueva" enctype="multipart/form-data">
+    <select name="tipo_operacion" required>
+        <option value="1">Venta</option>
+        <option value="2">Alquiler</option>
+        <option value="3">Alquiler Temporal</option>
+    </select>
+    
     <input type="text" name="titulo" placeholder="Título" required>
     <textarea name="descripcion" placeholder="Descripción"></textarea>
     <input type="number" name="precio" placeholder="Precio" step="0.01" required>

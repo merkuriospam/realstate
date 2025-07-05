@@ -5,6 +5,7 @@
 <table>
     <tr>
         <th>ID</th>
+        <th>Tipo</th>
         <th>Título</th>
         <th>Precio</th>
         <th>Dirección</th>
@@ -14,6 +15,7 @@
     <?php foreach($propiedades as $prop): ?>
     <tr>
         <td><?= $prop['id'] ?></td>
+        <td><?= getTipoOperacion($prop['tipo_operacion'] ?? 1) ?></td>
         <td><?= htmlspecialchars($prop['titulo']) ?></td>
         <td>$<?= number_format($prop['precio'], 2) ?></td>
         <td><?= htmlspecialchars($prop['direccion']) ?></td>

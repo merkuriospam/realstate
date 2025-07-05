@@ -1,6 +1,12 @@
 <h1>Editar Propiedad</h1>
 
 <form method="POST" action="/editar/<?= $propiedad['id'] ?>" enctype="multipart/form-data">
+    <select name="tipo_operacion" required>
+        <option value="1" <?= $propiedad['tipo_operacion'] == 1 ? 'selected' : '' ?>>Venta</option>
+        <option value="2" <?= $propiedad['tipo_operacion'] == 2 ? 'selected' : '' ?>>Alquiler</option>
+        <option value="3" <?= $propiedad['tipo_operacion'] == 3 ? 'selected' : '' ?>>Alquiler Temporal</option>
+    </select>
+    
     <input type="text" name="titulo" value="<?= htmlspecialchars($propiedad['titulo']) ?>" required>
     <textarea name="descripcion"><?= htmlspecialchars($propiedad['descripcion']) ?></textarea>
     <input type="number" name="precio" value="<?= $propiedad['precio'] ?>" step="0.01" required>

@@ -8,7 +8,7 @@
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f2f2f2; }
         form { max-width: 600px; }
-        input, textarea, button { width: 100%; margin-bottom: 10px; padding: 8px; }
+        input, textarea, button, select { width: 100%; margin-bottom: 10px; padding: 8px; }
         textarea { height: 100px; }
         .header { margin-bottom: 20px; }
         .header a { margin-right: 15px; }
@@ -19,7 +19,8 @@
 <body>
     <?php if(isset($_SESSION['auth'])): ?>
     <div class="header">
-        <a href="/">Listado</a>
+        <a href="/">Buscador</a>
+        <a href="/admin">Listado Admin</a>
         <a href="/nueva">Nueva Propiedad</a>
         <a href="/logout" style="float: right;">Cerrar Sesión</a>
     </div>
